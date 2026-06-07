@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "name": "animation-and-motion",
+      "description": "Use when building enter/leave transitions, layout animations, stagger effects, or spring-physics motion in pocopine components",
+      "category": "UI & styling",
+      "path": "animation-and-motion/SKILL.md"
+    },
+    {
+      "name": "auth",
+      "description": "Use when implementing authentication in pocopine apps — JWT verification, credentials, OAuth providers, session management, or guards",
+      "category": "Data & backend",
+      "path": "auth/SKILL.md"
+    },
+    {
+      "name": "background-jobs",
+      "description": "Use when defining background jobs, enqueueing work, configuring workers, or troubleshooting job execution in pocopine apps",
+      "category": "Data & backend",
+      "path": "background-jobs/SKILL.md"
+    },
+    {
+      "name": "client-modules",
+      "description": "Use when setting up or working with Pocopine's managed .client.ts modules for importing npm SDKs (Firebase, analytics, etc.) with typed Rust facades",
+      "category": "Tooling & ops",
+      "path": "client-modules/SKILL.md"
+    },
+    {
+      "name": "codec-crypto",
+      "description": "Use when adding or touching any hashing, checksums, base64, percent-encoding / URL escaping, or request signing (HMAC, Azure Shared-Key / SAS, token hashing) in the pocopine workspace. Routes the work through the shared pocopine-crypto and pocopine-codec crates instead of pulling in sha2 / md-5 / crc32c / hmac / base64 / percent-encoding directly or hand-rolling encoders.",
+      "category": "Framework internals",
+      "path": "codec-crypto/SKILL.md"
+    },
+    {
+      "name": "deploy",
+      "description": "Use when deploying a pocopine full-stack or static app to Fly.io, Railway, Render, or other hosts using the RFC 080 deploy contract",
+      "category": "Tooling & ops",
+      "path": "deploy/SKILL.md"
+    },
+    {
+      "name": "interaction-utilities",
+      "description": "Use when implementing keyboard navigation, floating positioning, element observation, focus management, scroll locking, or accessibility wiring in pocopine components",
+      "category": "UI & styling",
+      "path": "interaction-utilities/SKILL.md"
+    },
+    {
+      "name": "observability",
+      "description": "Use when setting up tracing, logging, analytics, or observability events in a pocopine application—both frontend and backend.",
+      "category": "Data & backend",
+      "path": "observability/SKILL.md"
+    },
+    {
+      "name": "pine-charts",
+      "description": "Use when building SVG-first, unstyled, accessible charts in pocopine with line, area, bar, scatter, pie, or custom layered visualizations",
+      "category": "UI & styling",
+      "path": "pine-charts/SKILL.md"
+    },
+    {
+      "name": "pine-icons",
+      "description": "Use when working with the pocopine Pine icons feature — the `icon!` proc macro for compile-time Rust SVG embedding, or the `<pine-icon>` template primitive with `register_icons!` for tree-shaking-friendly template rendering.",
+      "category": "UI & styling",
+      "path": "pine-icons/SKILL.md"
+    },
+    {
+      "name": "pine-richtext",
+      "description": "Use when building Rust/WASM rich-text editors with the Pine document model, schema setup, markdown round-trips, or table extensions",
+      "category": "UI & styling",
+      "path": "pine-richtext/SKILL.md"
+    },
+    {
+      "name": "pine-stylekit",
+      "description": "Use when building styles with Pine Stylekit, the Pocopine-native utility-CSS compiler, or working with @theme tokens and CSS generation in Rust/WASM projects",
+      "category": "UI & styling",
+      "path": "pine-stylekit/SKILL.md"
+    },
+    {
+      "name": "plugins",
+      "description": "Use when installing app or server plugins—wiring observability, auth, live queries, or other optional integrations into a pocopine app.",
+      "category": "Tooling & ops",
+      "path": "plugins/SKILL.md"
+    },
+    {
+      "name": "poco-directives",
+      "description": "Use when authoring pocopine template directives (pp-*), understanding directive syntax, modifiers, args, host constraints, or migrating from removed directives (pp-init/pp-cloak/pp-data)",
+      "category": "Core authoring",
+      "path": "poco-directives/SKILL.md"
+    },
+    {
+      "name": "poco-expressions",
+      "description": "Use when writing or debugging {{expr}} interpolation and pine-expr expressions in .poco templates (paths, operators, ternary, calls, assignment, magic variables like $index/$event/$store/$route).",
+      "category": "Core authoring",
+      "path": "poco-expressions/SKILL.md"
+    },
+    {
+      "name": "poco-templates",
+      "description": "Use when writing or debugging pocopine .poco template syntax, single-root rules, component tags, SVG namespace support, or template compilation in the pocopine framework.",
+      "category": "Core authoring",
+      "path": "poco-templates/SKILL.md"
+    },
+    {
+      "name": "pocopine-cli",
+      "description": "Use when working with the pocopine-cli: build, dev watch, run, deploy, doctor, env, js, stylekit, lsp commands",
+      "category": "Tooling & ops",
+      "path": "pocopine-cli/SKILL.md"
+    },
+    {
+      "name": "pocopine-components",
+      "description": "Use when defining, structuring, or debugging pocopine Components — the #[component] and #[handlers] macros, #[prop]/#[model] fields, templates, lifecycle hooks, and component composition patterns.",
+      "category": "Core authoring",
+      "path": "pocopine-components/SKILL.md"
+    },
+    {
+      "name": "reactivity-and-stores",
+      "description": "Use when building state management and reactivity in pocopine — understand the reactive model, App stores, and provide/inject context",
+      "category": "Core authoring",
+      "path": "reactivity-and-stores/SKILL.md"
+    },
+    {
+      "name": "routing",
+      "description": "Use when building SPA routes, implementing route guards/loaders, configuring pp-route links, or handling route navigation in pocopine.",
+      "category": "Data & backend",
+      "path": "routing/SKILL.md"
+    },
+    {
+      "name": "scoped-styles",
+      "description": "Use when authoring component stylesheets with automatic CSS scoping to a single component.",
+      "category": "UI & styling",
+      "path": "scoped-styles/SKILL.md"
+    },
+    {
+      "name": "server-functions",
+      "description": "Use when defining typed async server functions with `#[server]` macro, implementing access policies via guards, and calling them from the wasm client with `dispatch!` for async state updates.",
+      "category": "Data & backend",
+      "path": "server-functions/SKILL.md"
+    },
+    {
+      "name": "slots-and-composition",
+      "description": "Use when building or integrating components with default/named slots, scoped slots with pp-let, pp-as polymorphic rendering, or multi-component composition patterns in pocopine",
+      "category": "Core authoring",
+      "path": "slots-and-composition/SKILL.md"
+    },
+    {
+      "name": "storage",
+      "description": "Use when integrating object storage (S3/GCS/Azure) with resumable uploads, presigned/multipart/sequential transfer strategies, or browser-based file uploads",
+      "category": "Data & backend",
+      "path": "storage/SKILL.md"
+    },
+    {
+      "name": "sync-and-live",
+      "description": "Use when building offline-first data sync features or live invalidation in Pocopine apps — implementing sync streams, mutations, subscriptions, or multi-tenant filtered queries with local persistence.",
+      "category": "Data & backend",
+      "path": "sync-and-live/SKILL.md"
+    }
+  ]
+}
