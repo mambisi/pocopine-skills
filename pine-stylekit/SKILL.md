@@ -167,6 +167,10 @@ if compilation.has_errors() {
 
 **Later @theme blocks override earlier ones,** matching CSS cascade. Multiple `@theme` blocks in the input are merged; the last value for a token wins.
 
+**`text-[…]` is FONT-SIZE, not text-color.** The `text-` arbitrary family resolves to `font-size` (a length), so `text-[#fff]` emits `font-size:#fff` — invalid, silently dropped — and the color never applies, leaving the element on its inherited color. (Unlike `w-[red]`, the bad value is not rejected here, so it's an easy footgun: white-on-dark text shows up only in the theme where the inherited color happens to contrast.) Fix: define the color as a `--color-NAME` token and use `text-NAME` (e.g. `--color-white:#fff` → `text-white`). `bg-[#hex]` and `border-[#hex]` are unambiguous and work as expected — only `text-[…]` collides with the font-size family.
+
+**Theming with `[data-theme]`.** Color utilities compile to `var(--color-NAME)`, so multiple themes are just plain-CSS overrides of the `@theme` tokens under a root attribute: define the base palette in `@theme`, then `[data-theme="dark"] { --color-surface: …; }` etc., and bind `:data-theme="…"` on a root element. Flipping the attribute reskins every utility — no per-theme classes. Pair `:data-active="expr"` (etc.) with `data-[active=true]:…` variants for state styling.
+
 ## References
 
 - **RFC 092** (tracking issue #169): `/home/zempare-mambisi/RustProjects/pocopine/rfcs/rfc-092-pocopine-stylekit.md` — The decision document covering naming (crate placement), CLI (opt-in flag), Tailwind compatibility promise (shaped not compatible), token model (CSS-first `@theme`), extraction contract (AST not text), and phased plan.

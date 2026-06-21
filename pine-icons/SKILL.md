@@ -147,6 +147,7 @@ From `/home/zempare-mambisi/RustProjects/pocopine/docs/icons.md`:
 - **Per-icon parse cost on every render**: The component re-injects SVG via `innerHTML` on every prop change. Use `svg_hash` to skip redundant updates (the component does this internally via `#[watch]`).
 - **Styling via inheritance**: Icons inherit `currentColor`. To change fill/stroke, set `color` on the parent or use a wrapper with specific colors. Size is controlled by the `size` prop, but can be overridden with CSS on `.pine-icon` or the SVG directly.
 - **RFC 063 rewrite pending**: RFC 063 §4.4 specifies a future modernization to per-icon components (like `lucide-react`), retiring the current `pp-html` + registry pattern. The current API is stable and production-ready, but new code may eventually migrate.
+- **Every component that renders `<pine-icon>` must declare it in `uses`**: like any child custom tag, add `PineIcon` to `#[component(uses = [..])]` (and `use pine_icons::PineIcon;`), or the macro errors with `tag \`<pine-icon>\` is not declared in this component's \`uses\` list`. This is in addition to the app-startup `register_icons![…]` + `.register::<pine_icons::PineIcon>()` — registration ships the icons; `uses` declares the tag per component.
 
 ## References
 

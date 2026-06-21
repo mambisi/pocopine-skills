@@ -38,6 +38,12 @@
       "path": "deploy/SKILL.md"
     },
     {
+      "name": "design-to-app",
+      "description": "Use when turning a Claude Design (or any mockup/design) into a well-structured pocopine app — choosing app architecture (a store plus layout/leaf components), translating inline styles into Pine Stylekit, wiring icons and resizable regions, and verifying the result.",
+      "category": "Core authoring",
+      "path": "design-to-app/SKILL.md"
+    },
+    {
       "name": "interaction-utilities",
       "description": "Use when implementing keyboard navigation, floating positioning, element observation, focus management, scroll locking, or accessibility wiring in pocopine components",
       "category": "UI & styling",

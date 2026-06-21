@@ -39,6 +39,7 @@ machine-readable index (regenerated from each skill's frontmatter).
 
 | Skill | Use when |
 | --- | --- |
+| `design-to-app` | turning a Claude Design (or any mockup/design) into a well-structured pocopine app — choosing app architecture (a store plus layout/leaf components), translating inline styles into Pine Stylekit, wiring icons and resizable regions, and verifying the result. |
 | `poco-directives` | authoring pocopine template directives (pp-*), understanding directive syntax, modifiers, args, host constraints, or migrating from removed directives (pp-init/pp-cloak/pp-data) |
 | `poco-expressions` | writing or debugging {{expr}} interpolation and pine-expr expressions in .poco templates (paths, operators, ternary, calls, assignment, magic variables like $index/$event/$store/$route). |
 | `poco-templates` | writing or debugging pocopine .poco template syntax, single-root rules, component tags, SVG namespace support, or template compilation in the pocopine framework. |
